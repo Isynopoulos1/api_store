@@ -2,14 +2,7 @@ const request = require("supertest")
 const app = require("../../../app")
 
 it("return 200 on successful post", async () => {
-  const article = {
-    name: "test article",
-    price: 20,
-    type: "BUY",
-    picture: "/someweird/url/picture",
-    tags: ["work", "lifestyle"]
-  }
-
+  const article = global.articleBuilder()
   const { body } = await request(app).post("/api/v1/article").send(article).expect(201)
 
   expect(body.name).toEqual(article.name)
