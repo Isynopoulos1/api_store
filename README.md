@@ -22,6 +22,8 @@ create a keys_local.js file in the config folder where you remplace the `process
 install modules with `npm i` and then launch the integration tests with `npm test`
 server can optionaly be launched locally with `npm run dev`
 
+---
+
 3. **API DOCUMENTATION**
 
 the API is composed of 3 endpoint that are versioned and follow CRUD principles
